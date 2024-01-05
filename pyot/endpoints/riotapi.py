@@ -18,7 +18,7 @@ class RiotAPIEndpoint(BaseEndpoint):
         "lol": {
             "champion_v3_rotation": "/lol/platform/v3/champion-rotations",
             "champion_mastery_v4_by_champion_id": "/lol/champion-mastery/v4/champion-masteries/by-summoner/{summoner_id}/by-champion/{champion_id}",
-            "champion_mastery_v4_all_mastery": "/lol/champion-mastery/v4/champion-masteries/by-summoner/{summoner_id}",
+            "champion_mastery_v4_all_mastery": "/lol/champion-mastery/v4/champion-masteries/by-puuid/{puuid}",
             "clash_v1_players": "/lol/clash/v1/players/by-summoner/{summoner_id}",
             "clash_v1_teams": "/lol/clash/v1/teams/{id}",
             "clash_v1_tournaments_by_team_id": "/lol/clash/v1/tournaments/by-team/{team_id}",

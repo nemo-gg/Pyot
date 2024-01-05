@@ -58,7 +58,7 @@ class ChampionMasteries(PyotCore):
     total_score: int
 
     class Meta(PyotCore.Meta):
-        rules = {"champion_mastery_v4_all_mastery": ["summoner_id"]}
+        rules = {"champion_mastery_v4_all_mastery": ["puuid"]}
 
     def __getitem__(self, item):
         if not isinstance(item, int):

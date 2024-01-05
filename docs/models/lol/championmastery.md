@@ -14,7 +14,7 @@ Definitions:
 * `__len__` -> `int` 
 
 Endpoints: 
-* `champion_mastery_v4_all_mastery`: `['summoner_id']` 
+* `champion_mastery_v4_all_mastery`: `['puuid']` 
 
 Attributes: 
 * `summoner_id` -> `str` 
