@@ -53,7 +53,7 @@ class ChampionMastery(PyotCore):
 
 
 class ChampionMasteries(PyotCore):
-    summoner_id: str
+    puuid: str
     masteries: List[ChampionMastery]
     total_score: int
 
@@ -71,7 +71,7 @@ class ChampionMasteries(PyotCore):
     def __len__(self):
         return len(self.masteries)
 
-    def __init__(self, summoner_id: str = empty, platform: str = models.lol.DEFAULT_PLATFORM):
+    def __init__(self, puuid: str = empty, platform: str = models.lol.DEFAULT_PLATFORM):
         self.initialize(locals())
 
     def transform(self, data):
@@ -85,4 +85,4 @@ class ChampionMasteries(PyotCore):
     @property
     def summoner(self) -> "Summoner":
         from .summoner import Summoner
-        return Summoner(id=self.summoner_id, platform=self.platform)
+        return Summoner(puuid=self.puuid, platform=self.platform)
