@@ -196,13 +196,13 @@ class FeaturedGameData(PyotStatic):
 # PYOT CORE OBJECTS
 
 class CurrentGame(FeaturedGameData, PyotCore):
-    summoner_id: str
+    puuid: str
     teams: List[CurrentGameTeamData]
 
     class Meta(FeaturedGameData.Meta, PyotCore.Meta):
-        rules = {"spectator_v4_current_game": ["summoner_id"]}
+        rules = {"spectator_v5_current_game": ["puuid"]}
 
-    def __init__(self, summoner_id: str = empty, platform: str = models.lol.DEFAULT_PLATFORM):
+    def __init__(self, puuid: str = empty, platform: str = models.lol.DEFAULT_PLATFORM):
         self.initialize(locals())
 
     def transform(self, data):
@@ -249,7 +249,7 @@ class CurrentGame(FeaturedGameData, PyotCore):
     @property
     def summoner(self) -> "Summoner":
         from .summoner import Summoner
-        return Summoner(id=self.summoner_id, platform=self.platform)
+        return Summoner(puuid=self.puuid, platform=self.platform)
 
 
 class FeaturedGames(PyotCore):

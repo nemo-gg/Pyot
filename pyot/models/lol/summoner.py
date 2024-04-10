@@ -66,7 +66,7 @@ class Summoner(PyotCore):
     @property
     def current_game(self) -> "CurrentGame":
         from .spectator import CurrentGame
-        return CurrentGame(summoner_id=self.id, platform=self.platform)
+        return CurrentGame(puuid=self.id, platform=self.platform)
 
     @property
     def profile_icon(self) -> "ProfileIcon":

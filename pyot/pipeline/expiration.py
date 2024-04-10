@@ -39,7 +39,7 @@ class ExpirationManager:
             "match_v5_match": 0,
             "match_v5_timeline": 0,
             "match_v5_matches": 0,
-            "spectator_v4_current_game": 0,
+            "spectator_v5_current_game": 0,
             "spectator_v4_featured_games": 0,
             "summoner_v4_by_name": 0,
             "summoner_v4_by_id": 0,

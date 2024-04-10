@@ -39,7 +39,7 @@ class RiotAPIEndpoint(BaseEndpoint):
             "match_v5_match": "/lol/match/v5/matches/{id}",
             "match_v5_timeline": "/lol/match/v5/matches/{id}/timeline",
             "match_v5_matches": "/lol/match/v5/matches/by-puuid/{puuid}/ids",
-            "spectator_v4_current_game": "/lol/spectator/v4/active-games/by-summoner/{summoner_id}",
+            "spectator_v5_current_game": "/lol/spectator/v5/active-games/by-summoner/{puuid}",
             "spectator_v4_featured_games": "/lol/spectator/v4/featured-games",
             "summoner_v4_by_name": "/lol/summoner/v4/summoners/by-name/{name}",
             "summoner_v4_by_id": "/lol/summoner/v4/summoners/{id}",
